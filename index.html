@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    </head>
+    <body>
+
+    <header>
+        <h1>My E-Commerce Store</h1>
+        <p>Discover products at great prices!</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Login Section -->
+        <div class="login-box" id="login">
+            <h2>User Login</h2>
+
+            <form onsubmit="loginUser(event)">
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p id="message"></p>
+        </div>
+
+        <!-- Products Section -->
+        <section id="store" class="hidden">
+
+            <h2 class="section-title">Our Products</h2>
+
+            <div class="products">
+
+                <div class="product">
+                    <div class="product-icon">💻</div>
+                    <h3>Laptop</h3>
+                    <p class="price">₹45,000</p>
+                    <button onclick="buy('Laptop')">Buy Now</button>
+                </div>
+
+                <div class="product">
+                    <div class="product-icon">🎧</div>
+                    <h3>Headphones</h3>
+                    <p class="price">₹1,500</p>
+                    <button onclick="buy('Headphones')">Buy Now</button>
+                </div>
+
+                <div class="product">
+                    <div class="product-icon">📱</div>
+                    <h3>Smartphone</h3>
+                    <p class="price">₹15,000</p>
+                    <button onclick="buy('Smartphone')">Buy Now</button>
+                </div>
+
+            </div>
+
+            <p id="result"></p>
+
+            <div class="logout-area">
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My E-Commerce Store | All Rights Reserved</p>
+    </footer>
+    </body>
+</html>
